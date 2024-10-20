@@ -39,7 +39,7 @@ int main() {
 ```
 ## OUTPUT
 ```
-![WhatsApp Image 2024-10-19 at 20 11 19_8f27dd03](https://github.com/user-attachments/assets/26f3aacf-8af2-4cd5-a67a-ba13256d103e)
+
 ```
 
 
@@ -102,7 +102,8 @@ int main (int argc, char* argv[]) {
 ## OUTPUT
 ```
 
-![WhatsApp Image 2024-10-19 at 20 15 15_f1013b41](https://github.com/user-attachments/assets/8fd2ec3a-8e5f-41e9-8afc-9fc93604e7fe)
+![image](https://github.com/user-attachments/assets/d0408d2e-c1fc-47a0-8745-2d3c450304bb)
+
 
 ```
 
