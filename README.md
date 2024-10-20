@@ -38,11 +38,11 @@ int main() {
 }
 ```
 ## OUTPUT
-```
+
 ![WhatsApp Image 2024-10-19 at 20 11 19_9315ecbb](https://github.com/user-attachments/assets/59b92427-f5d6-4e04-ad08-9da0992e6a6a)
 
 
-```
+
 
 
 
@@ -102,13 +102,13 @@ int main (int argc, char* argv[]) {
 
 
 ## OUTPUT
-```
+
 
 ![WhatsApp Image 2024-10-19 at 20 15 15_52beabce](https://github.com/user-attachments/assets/fd0a2c2c-0273-4334-82a1-b25f186c41b3)
 
 
 
-```
+
 
 
 
