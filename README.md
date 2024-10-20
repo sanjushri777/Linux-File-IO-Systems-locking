@@ -20,6 +20,27 @@ Execute the C Program for the desired output.
 # PROGRAM:
 
 ## 1.To Write a C program that illustrates files copying 
+```
+#include <unistd.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdlib.h>
+
+int main() {
+    char block[1024];
+    int in, out;
+    int nread;
+    in = open("filecopy.c", O_RDONLY);
+    out = open("file.out", O_WRONLY|O_CREAT, S_IRUSR|S_IWUSR);
+    while((nread = read(in,block,sizeof(block))) > 0)
+    write(out,block,nread);
+    exit(0);
+}
+```
+## OUTPUT
+```
+![WhatsApp Image 2024-10-19 at 20 11 19_8f27dd03](https://github.com/user-attachments/assets/26f3aacf-8af2-4cd5-a67a-ba13256d103e)
+```
 
 
 
@@ -28,12 +49,62 @@ Execute the C Program for the desired output.
 
 
 ## 2.To Write a C program that illustrates files locking
+```
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/file.h>
+
+int main (int argc, char* argv[]) {
+    char* file = argv[1];
+    int fd;
+    struct flock lock;
+
+    printf ("opening %s\n", file);
+
+    /* Open a file descriptor to the file. */
+    fd = open(file, O_WRONLY);
+
+    // Acquire shared lock
+    if (flock(fd, LOCK_SH) == -1) {
+        printf("Error: Could not acquire shared lock\n");
+    } else {
+        printf("Acquiring shared lock using flock\n");
+    }
+
+    getchar(); // Wait for user input before upgrading lock
+
+    // Non-atomically upgrade to exclusive lock (non-blocking mode)
+    if (flock(fd, LOCK_EX | LOCK_NB) == -1) {
+        printf("Error: Could not acquire exclusive lock\n");
+    } else {
+        printf("Acquiring exclusive lock using flock\n");
+    }
+
+    getchar(); // Wait for user input before unlocking
+
+    // Release lock
+    if (flock(fd, LOCK_UN) == -1) {
+        printf("Error: Could not unlock\n");
+    } else {
+        printf("Unlocking\n");
+    }
+
+    close(fd);
+    return 0;
+}
+```
 
 
 
 
 ## OUTPUT
+```
 
+![WhatsApp Image 2024-10-19 at 20 15 15_f1013b41](https://github.com/user-attachments/assets/8fd2ec3a-8e5f-41e9-8afc-9fc93604e7fe)
+
+```
 
 
 
