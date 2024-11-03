@@ -1,3 +1,5 @@
+# Name: SANJUSHRI A
+# Register No:212223040187
 # Linux-File-IO-Systems-locking
 Ex07-Linux File-IO Systems-locking
 # AIM:
